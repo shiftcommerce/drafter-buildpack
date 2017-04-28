@@ -1,2 +1,2 @@
 #!/bin/sh
-git clone --recursive git://github.com/apiaryio/drafter.git; cd drafter; ./configure; make test; make drafter; make install
+git clone --recursive git://github.com/apiaryio/drafter.git; cd drafter; ./configure; make test; make drafter; make DESTDIR=/app install
