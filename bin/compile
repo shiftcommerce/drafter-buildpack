@@ -1,4 +1,7 @@
 #!/bin/sh
-echo "The path is";
-echo $PATH;
-git clone --recursive git://github.com/apiaryio/drafter.git; cd drafter; ./configure; make test; make drafter; make DESTDIR=/app install
+BUILD_DIR=${1:-}
+mkdir -p "$BUILD_DIR/.heroku/drafter/"
+export PATH="$BUILD_DIR/.heroku/drafter/bin:$BUILD_DIR/.heroku/yarn/bin":$PATH
+git clone --recursive git://github.com/apiaryio/drafter.git; cd drafter; ./configure; make test; make drafter; make DESTDIR=$BUILD_DIR/.heroku/drafter install
+echo "LETS SEE IF IT IS HERE";
+which drafter;
