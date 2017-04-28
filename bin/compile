@@ -1,2 +1,4 @@
 #!/bin/sh
+echo "The path is";
+echo $PATH;
 git clone --recursive git://github.com/apiaryio/drafter.git; cd drafter; ./configure; make test; make drafter; make DESTDIR=/app install
