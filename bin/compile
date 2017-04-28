@@ -8,8 +8,3 @@ rm -rf drafter
 
 
 echo "export PATH=\"$BUILD_DIR/.heroku/drafter/bin\":$PATH" > $BUILD_DIR/.profile.d/add_drafter_to_path.sh
-
-echo "We are currently in"
-pwd
-echo "and a quick ls gives us"
-ls -al
