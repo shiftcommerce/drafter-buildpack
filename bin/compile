@@ -11,4 +11,4 @@ rm -rf drafter
 echo "Path is"
 echo $PATH
 
-echo "export PATH=\"$BUILD_DIR/.heroku/drafter/bin\":$PATH" > $bp_dir/export
+echo "export PATH=\"$BUILD_DIR/.heroku/drafter/bin\":$PATH" > $BUILD_DIR/export
