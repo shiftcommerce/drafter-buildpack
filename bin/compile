@@ -5,5 +5,10 @@ export PATH="$BUILD_DIR/.heroku/drafter/bin":$PATH
 git clone --recursive git://github.com/apiaryio/drafter.git; cd drafter; ./configure; make drafter; make DESTDIR=$BUILD_DIR/.heroku/drafter install
 cd ..
 rm -rf drafter
+
+
+
 echo "Path is"
 echo $PATH
+
+echo "export PATH=\"$BUILD_DIR/.heroku/drafter/bin\":$PATH > $bp_dir/export
