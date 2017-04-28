@@ -2,6 +2,6 @@
 BUILD_DIR=${1:-}
 mkdir -p "$BUILD_DIR/.heroku/drafter/"
 export PATH="$BUILD_DIR/.heroku/drafter/bin:$BUILD_DIR/.heroku/yarn/bin":$PATH
-git clone --recursive git://github.com/apiaryio/drafter.git; cd drafter; ./configure; make test; make drafter; make DESTDIR=$BUILD_DIR/.heroku/drafter install
+git clone --recursive git://github.com/apiaryio/drafter.git; cd drafter; ./configure; make drafter; make DESTDIR=$BUILD_DIR/.heroku/drafter install
 cd ..
 rm -rf drafter
